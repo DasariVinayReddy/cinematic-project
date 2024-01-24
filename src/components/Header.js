@@ -220,27 +220,35 @@ export const Header = () => {
             {/* Current: "bg-gray-900 text-white", Default: "text-gray-300
       hover:bg-gray-700 hover:text-white" */}
             <NavLink
-              to="/#"
-              className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+              to="/"
+              className={({ isActive }) =>
+                isActive ? activeclass : inActiveclass
+              }
               aria-current="page"
             >
               Home
             </NavLink>
             <NavLink
-              to="/#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              to="/movie/popular"
+              className={({ isActive }) =>
+                isActive ? activeclass : inActiveclass
+              }
             >
               Popular
             </NavLink>
             <NavLink
-              to="/#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              to="/movie/top_rated"
+              className={({ isActive }) =>
+                isActive ? activeclass : inActiveclass
+              }
             >
               Top Rated
             </NavLink>
             <NavLink
-              to="/#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              to="/movie/upcoming"
+              className={({ isActive }) =>
+                isActive ? activeclass : inActiveclass
+              }
             >
               Upcoming
             </NavLink>
