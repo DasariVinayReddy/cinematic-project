@@ -24,9 +24,14 @@ export const Header = () => {
   }, [darkmode]);
 
   const activeclass =
-    "bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium";
+    "bg-gray-900 text-white bg-black rounded-md px-3 py-2 text-sm font-medium";
   const inActiveclass =
     "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium";
+
+  const navactiveclass =
+    "bg-gray-900 text-white bg-black block rounded-md px-3 py-2 text-base font-medium";
+  const innavactiveclass =
+    "text-gray-300   hover:bg-gray-700 hover:text-black block rounded-md px-3 py-2 text-base font-medium";
   return (
     <>
       <nav className="bg-white border-b-2 border-gray-200 px-2 sm:px-4 py-2 dark:bg-gray-900 dark:border-b-1 dark:border-gray-900">
@@ -222,7 +227,7 @@ export const Header = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? activeclass : inActiveclass
+                isActive ? navactiveclass : innavactiveclass
               }
               aria-current="page"
             >
@@ -231,7 +236,7 @@ export const Header = () => {
             <NavLink
               to="/movie/popular"
               className={({ isActive }) =>
-                isActive ? activeclass : inActiveclass
+                isActive ? navactiveclass : innavactiveclass
               }
             >
               Popular
@@ -239,7 +244,7 @@ export const Header = () => {
             <NavLink
               to="/movie/top_rated"
               className={({ isActive }) =>
-                isActive ? activeclass : inActiveclass
+                isActive ? navactiveclass : innavactiveclass
               }
             >
               Top Rated
@@ -247,7 +252,7 @@ export const Header = () => {
             <NavLink
               to="/movie/upcoming"
               className={({ isActive }) =>
-                isActive ? activeclass : inActiveclass
+                isActive ? navactiveclass : innavactiveclass
               }
             >
               Upcoming
