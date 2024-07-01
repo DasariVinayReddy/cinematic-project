@@ -37,7 +37,7 @@ export const Header = () => {
       <nav className="bg-white border-b-2 border-gray-200 px-2 sm:px-4 py-2 dark:bg-gray-900 dark:border-b-1 dark:border-gray-900">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
-            <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <div className="absolute inset-y-0 left-0 flex  justify-center items-center sm:hidden">
               {/* Mobile menu button*/}
               <button
                 onClick={() => setHidden(!hidden)}
